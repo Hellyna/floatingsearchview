@@ -10,9 +10,10 @@ android {
         versionCode 13
         versionName "2.1.1"
         //consumerProguardFiles 'consumer-proguard-rules.txt'
-    }
 
-    useLibrary 'android.test.runner'
+        testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
+        vectorDrawables.useSupportLibrary = true
+    }
 }
 
 dependencies {
@@ -21,6 +22,9 @@ dependencies {
     api 'com.google.android.material:material:1.0.0'
     api 'androidx.cardview:cardview:1.0.0'
     api 'com.bartoszlipinski:viewpropertyobjectanimator:1.4.5'
+    testImplementation 'junit:junit:4.13'
+    androidTestImplementation 'androidx.test.ext:junit:1.1.1'
+    androidTestImplementation 'androidx.test.espresso:espresso-core:3.2.0'
 }
 
 //enable when uploading lib// apply from: 'maven-push.gradle'
